@@ -1,10 +1,10 @@
-import express from 'express';
-import profile from '../controllers/profile-controller';
+import express from "express";
+import profileController from '../controllers/profile-controller';
 
 const router = express.Router();
 
-
-router.get('/', profile);
-
+// Agregamos ambos métodos para soportar GET y POST
+router.get('/', profileController);
+router.post('/', profileController);
 
 export default router;
